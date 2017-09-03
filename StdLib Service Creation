@@ -1,0 +1,28 @@
+You’ll now want to create a StdLib service for your Slack App. 
+We’ve built a slack template for you to use to get a bot up and running with very little effort. 
+In the stdlib directory you just created, type:
+$ lib create -t slack
+You’ll be asked to enter a Service Name, we recommend slack-app for the purposes of this tutorial.
+/***********\
+This will fetch the slack template from our utils.templates service that’s available open source on GitHub. 
+It will run an npm installation locally for necessary files, you can read additional documentation here. 
+Once complete, you will be instructed to enter the project directory.
+
+$ cd <username>/slack-app
+To make sure your slack-app is ready, let’s run a test “Slash” command — for example, this would respond to /hello hey there when run in your team in the channel “general” by the user “test”.
+$ lib .commands.hello test general "hey there"
+You’ll get a result that looks like this:
+
+Example Response to “/hello” command
+Great! To see what’s happening behind the scenes, run the exact same command with a -d flag (debug mode on):
+$ lib .commands.hello test general "hey there" -d
+This will show what’s going on in the background, using a local version of the StdLib gateway for testing purposes.
+
+We can test events as well. For example, this as a “message” event that will be triggered any time a message is posted to a public channel (somebody writes “hey”):
+$ lib .events.message test general "hey"
+
+Sample Event Response
+Finally, deploy your service live to StdLib — your app won’t quite be ready to use yet, but we need it to talk to Slack to verify that it’s working.
+$ lib up dev
+
+StdLib Service Deployment Takes Only a Few Seconds
