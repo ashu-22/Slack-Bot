@@ -1,0 +1,3 @@
+Any interaction models that involve conversation, uploading files, etc. will rely on a bot, so let’s make sure we add one. Find the Bot Users option on the left sidebar, under the Features heading.
+
+Click Add a Bot User to create your bot. You’ll be given an option to enter in the bot username — @test_app should work just fine. Click Add Bot User to complete the process, and that’s it! Your bot user is now added and ready to be used.
