@@ -1,0 +1,11 @@
+Playing With Your New Slack App
+You’re all done. Try it out! Your Slack App is now available for use in the Slack Team you authorized it for. By default, “Test App” should respond to a /hello command and to the regex pattern /hi|hello|sup|hey/ in normal channel messages. It will also welcome members when they join channels.
+/***************\
+
+Test App in Action!
+You can modify these behaviors in your StdLib service directory at functions/commands/hello.js, functions/events/message/__main__.js, and functions/events/message/channel_join.js. You can even create your own event responses and commands — just make sure for Slash Commands that you enable them via the Slack App management portal and your app has the correct permissions.
+You can also Enable Distribution for this app and share it with other people by linking them to https://<username>.lib.id/slack-app@dev/, but we recommend creating a separate Slack App for this purpose and using lib release (so you don’t need the @dev qualifier). Full documentation for the StdLib command line tools is available on GitHub.
+That’s it! Your Slack App is live!
+/************\
+Thanks for reading, and we hope we’ve been helpful showing you how easy it is to create a Slack App using Standard Library! Feel free to dig around in the template-generated codebase and make modifications or add new features. If there’s something you think the slack template is missing, it’s available open source at https://github.com/stdlib/utils.templates under the templates/slack directory. We welcome contributions and bugfixes!
+
