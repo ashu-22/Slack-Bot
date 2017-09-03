@@ -1,0 +1,8 @@
+To use StdLib, you’ll want Node.js version 6.9.x or higher installed from the Official Node.js Website. 
+Once complete, open up your Terminal or Command Line and install the StdLib Command Line Tools with the following:
+$ npm install lib.cli -g
+This gives you access to the lib command for service management and execution. Next, create a stdlib directory for your StdLib services.
+$ mkdir stdlib
+$ cd stdlib
+$ lib init
+You’ll be asked to log in using the credentials you created your account with. That’s it!
