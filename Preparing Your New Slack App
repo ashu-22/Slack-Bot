@@ -1,0 +1,7 @@
+Preparing Your New Slack App
+First, make sure you’re signed in to Slack. Next, visit your Slack Apps page at https://api.slack.com/apps. You’ll see a screen that looks like the following, though you may not have any existing apps yet.
+
+Click “Create New App”
+Simply click Create New App to create your app. You’ll be presented with a modal to enter in your App Name (I recommend “Test App” for the purposes of this tutorial) and the Development Slack Team you’d like to add it to.
+
+From here, click Create App and you’ll find yourself on a Basic Information page. Keep this page open in your browser, we’ll be using it in a second.
