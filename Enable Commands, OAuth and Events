@@ -1,0 +1,21 @@
+We’ll want to enable some Slack features for our App to make sure we can interact with our bot successfully. 
+Make sure you’re in your Slack App settings before continuing.
+Enable Slash Commands
+Slash Commands are how Slack Apps respond to /command style queries. You can read more about them on the Slack Slash Commands API Reference. We know from the last step that our service has a pre-built response to /hello, so let’s add that first. Click Slash Commands on the sidebar.
+
+Click “Create New Command”
+After clicking Create New Command, you’ll be asked to enter some command details, make sure you enter the following:
+Command: /hello
+Request URL:https://<username>.lib.id/slack-app@dev/commands/:bg
+Short Description: Hello World
+
+The “:bg” indicator at the end of the URL indicates we’re running this as a background function. This means the StdLib gateway will immediately return an HTTP 202 Accepted status, but continue execution in the background (this tells Slack the service is working ASAP). When you’re finished, hit Save in the bottom right corner of your screen. If you encounter a warning about app permissions, you can ignore it for now.
+Enable OAuth
+Next, we’ll enable OAuth. On the sidebar menu, click OAuth & Permissions. Once there, you’ll want to enter in a Redirect URL as follows: https://<username>.lib.id/slack-app@dev/auth/
+
+Add your Auth endpoint, make sure username is correct!
+Hit Add and then click Save URLs. You should get a success message, and OAuth is ready!
+Enable Event Subscriptions
+Finally, we want to enable Event Subscriptions. Events are anything that can happen in your public channels, groups and messages. You can read more about the Slack Events API here. To enable them, click on Event Subscriptions option on the left sidebar. Toggle events to On in the top right, and then put in your Request URL: https://<username>.lib.id/slack-app@dev/events/:bg
+
+Slack sends a challenge parameter to this endpoint, which is why we had to make sure we deployed our service earlier. This endpoint should get automatically verified, if not, make sure you go back to Minute 5 to ensure you deployed your service.
