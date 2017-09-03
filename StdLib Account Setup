@@ -1,0 +1,3 @@
+Next, you’ll need a StdLib Account to deploy your Slack App (bot) as a scalable web service, as well as use your StdLib credentials to access the utils.
+storage service. This handles simple data persistence for your Slack App — like team data for when others install your app. 
+Visit https://stdlib.com and click Sign Up to create your account.
